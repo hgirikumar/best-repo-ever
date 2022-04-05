@@ -1,0 +1,20 @@
+name: Aritifact
+
+on: [push]
+
+env: 
+   ARTI_NAME: on the floor
+
+jobs:
+  main:
+    name: Aritifact job one
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out action
+        uses: actions/checkout@v2
+      - name: upload the Aritifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.ARTI_NAME }}
+          path: ./machine/
+ 
