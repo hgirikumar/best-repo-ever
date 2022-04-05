@@ -16,5 +16,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.ARTI_NAME }}
-          path: .
+          path: best-repo-ever/machine/test/inti/
  
