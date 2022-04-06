@@ -1,4 +1,5 @@
 name: pipe-line
+
 on: push
 
 jobs:
@@ -9,7 +10,7 @@ jobs:
       - run: python hello.py
 
   build:
-    needs: push
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,8 +18,3 @@ jobs:
         with:
           name: hello-arti
           path: .
-
-    
-    
-    
-    
